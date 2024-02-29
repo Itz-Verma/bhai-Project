@@ -1,22 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clickable Button</title>
-</head>
-<body>
+    <style>
+        /* Style for right-aligned number input */
+        input[type="number"] {
+            text-align: right;
+        }
+        #numerical-entries{
+            display: flex;
+            justify-content: space-between ;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="title">
+        <h1>Calculator</h1>
+      </div>
 
-<!-- Button with an onclick event -->
-<button onclick="sayHello()">Click me</button>
+      <div id="options">
+        <form>
+          <input type="radio" id="gold" name="metal" value="male" checked />
+          <label for="gold">Gold</label>
 
-<!-- JavaScript code to handle the button click -->
-<script>
-    function sayHello() {
-        alert('Hello!');
-    }
-</script>
+          <input type="radio" id="silver" name="metal" />
+          <label for="silver">Silver</label>
+        </form>
+      </div>
+      <div id="numerical-entries">
+        <input type="number"
+        id="metal-weight"
+        name="metal-weight"
+        value="0"> kg
+        <input type="number"
+        id="metal-weight"
+        name="metal-weight"
+        value="0"> %
+        
+        <input type="number"
+        id="metal-weight"
+        name="metal-weight"
+        value="0"> kg
+      </div>
 
-</body>
+
+    </div>
+
+    <script>
+      const goldRadio = document.getElementById("gold");
+      const silverRadio = document.getElementById("silver");
+
+      const resultDiv = document.getElementById("result");
+
+      function handleRadioSelection() {
+        if (goldRadio.checked) {
+            console.log("hello");
+            document.body.style.background= "#ffd700";
+        } else {
+            document.body.style.background = "#c0c0c0";
+        }
+      }
+
+      // Attach the event listener to each radio button
+      goldRadio.addEventListener("change", handleRadioSelection);
+      silverRadio.addEventListener("change", handleRadioSelection);
+    </script>
+  </body>
 </html>
-

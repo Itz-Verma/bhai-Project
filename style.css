@@ -1,0 +1,30 @@
+/* Style for right-aligned number input */
+body {
+  background-color: #ffd700;
+}
+input[type="number"] {
+  text-align: right;
+}
+#numerical-entries {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+
+#weight-unit,
+#fine-unit,
+#purity-unit {
+  padding: 50px;
+  padding-top: 20px;
+}
+
+#title,
+#options {
+  display: flex;
+  justify-content: center;
+}
+
+#options {
+  padding-bottom: 20px;
+}

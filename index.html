@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,59 +9,45 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
   </head>
+
   <body>
+
     <div class="container">
+
       <div id="title">
         <h1><u><b>Metal Purity Calculator</b></u></h1>
       </div>
 
       <div id="options">
         <form>
-          <input type="radio" id="gold" name="metal" value="male" checked />
+          <input type="radio" id="gold" name="metal" value="male"  />
           <label for="gold">Gold</label>
 
-          <input type="radio" id="silver" name="metal" />
+          <input type="radio" id="silver" name="metal"  checked/>
           <label for="silver">Silver</label>
         </form>
       </div>
 
       <div id="numerical-entries">
         <div id="weight-unit">
-          <input type="number"
-        id="metal-weight"
-        name="metal-weight"
-        >kg
-
+          <input type="number" id="metal-weight" name="weight">
+          <div class="unit">KG</div>
         </div>
 
         <div id="fine-unit">
-          <input type="number"
-        id="fine"
-        name="metal-weight"
-        > %
-
+          <input type="number" id="fine" name="metal-weight"> %
+          
         </div>
         
         <div id="purity-unit">
-          <input type="number"
-        id="pure-metal-weight"
-        name="metal-weight"
-        > kg
+          <input type="number" id="pure-metal-weight" name="metal-weight"> 
+          <div class="unit">KG</div>
+        </div> 
 
-        </div>
-        
-        
-        
       </div>
-      <div>
-          
-      </div>
-
 
     </div>
-    <script>
-      
 
-    </script>
   </body>
+
 </html>

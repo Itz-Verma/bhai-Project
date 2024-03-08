@@ -6,12 +6,17 @@ const metalWeight = document.getElementById("metal-weight");
 const fine = document.getElementById("fine");
 const purity = document.getElementById("pure-metal-weight");
 
-
 function handleRadioSelection() {
+  const u = document.getElementsByClassName("unit");
+
   if (goldRadio.checked) {
+    u[0].innerText = "grams";
+    u[1].innerText = "grams";
     document.body.style.background = "#ffd700";
   } else {
     document.body.style.background = "#c0c0c0";
+    u[0].innerText = "KG";
+    u[1].innerText = "KG";
   }
 }
 

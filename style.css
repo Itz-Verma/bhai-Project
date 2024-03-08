@@ -1,6 +1,6 @@
 /* Style for right-aligned number input */
 body {
-  background-color: #ffd700;
+  background-color: #c0c0c0;
 }
 input[type="number"] {
   text-align: right;
@@ -15,6 +15,7 @@ input[type="number"] {
 #weight-unit,
 #fine-unit,
 #purity-unit {
+  display: flex;
   padding: 50px;
   padding-top: 20px;
 }

@@ -6,12 +6,14 @@ const metalWeight = document.getElementById("metal-weight");
 const fine = document.getElementById("fine");
 const purity = document.getElementById("pure-metal-weight");
 
+const metalPrice = document.getElementById("price");
+const metalCost = document.getElementById("amount");
 function handleRadioSelection() {
   const u = document.getElementsByClassName("unit");
 
   if (goldRadio.checked) {
-    u[0].innerText = "grams";
-    u[1].innerText = "grams";
+    u[0].innerText = "GRAMS";
+    u[1].innerText = "GRAMS";
     document.body.style.background = "#ffd700";
   } else {
     document.body.style.background = "#c0c0c0";
@@ -31,6 +33,18 @@ function calculatePurity() {
   }
 }
 
+function calculateMetalPrice() {
+  const mp = document.getElementById("price").value;
+  const mc = document.getElementById("amount");
+  const pmw = document.getElementById("pure-metal-weight").value;
+
+  if (!isNaN(mp) && !isNaN(pmw)) {
+    mc.value = (pmw * mp) ;
+  } else {
+    mc.value = 0;
+  }
+
+}
 // Attach the event listener to each radio button
 goldRadio.addEventListener("change", handleRadioSelection);
 silverRadio.addEventListener("change", handleRadioSelection);

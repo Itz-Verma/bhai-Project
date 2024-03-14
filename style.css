@@ -5,20 +5,27 @@ body {
 input[type="number"] {
   text-align: right;
 }
-#numerical-entries {
+#weight-calculation,
+#price-calculation {
   display: flex;
   justify-content: center;
 
   align-items: center;
 }
 
+
 #weight-unit,
 #fine-unit,
-#purity-unit {
+#purity-unit,
+#metal-price,
+#metal-cost,
+#cal-price,
+#cal-price{
   display: flex;
   padding: 50px;
   padding-top: 20px;
 }
+
 
 #title,
 #options {

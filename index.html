@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metal Purity Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
 
   <body>
-
     <div class="container">
-
       <div id="title">
-        <h1><u><b>Metal Purity Calculator</b></u></h1>
+        <h1>
+          <u><b>Metal Purity Calculator</b></u>
+        </h1>
       </div>
 
       <div id="options">
         <form>
-          <input type="radio" id="gold" name="metal" value="male"  />
+          <input type="radio" id="gold" name="metal" value="male" />
           <label for="gold">Gold</label>
 
-          <input type="radio" id="silver" name="metal"  checked/>
+          <input type="radio" id="silver" name="metal" checked />
           <label for="silver">Silver</label>
         </form>
       </div>
 
-      <div id="numerical-entries">
+      <div id="weight-calculation">
         <div id="weight-unit">
-          <input type="number" id="metal-weight" name="weight">
+          <input type="number" id="metal-weight" name="weight" />
           <div class="unit">KG</div>
         </div>
 
         <div id="fine-unit">
-          <input type="number" id="fine" name="metal-weight"> %
-          
+          <input type="number" id="fine" name="metal-weight" /> %
+        </div>
+
+        <div id="purity-unit">
+          <input type="number" id="pure-metal-weight" name="metal-weight" />
+          <div class="unit">KG</div>
+        </div>
+      </div>
+      <div id="price-calculation">
+
+        <div id="metal-price">
+          <input type="number" id="price" placeholder="enter silver price of 1kg ">
+
+        </div>
+
+        <div id="metal-cost" type="number">
+          <input id="amount" type="number" placeholder="cost of the metal">
+        </div>
+
+        <div id="cal-price">
+          <button onclick="calculateMetalPrice()">Calculate Price</button>
         </div>
         
-        <div id="purity-unit">
-          <input type="number" id="pure-metal-weight" name="metal-weight"> 
-          <div class="unit">KG</div>
-        </div> 
-
       </div>
-
     </div>
-
   </body>
-
+ 
 </html>

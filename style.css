@@ -1,38 +1,56 @@
 /* Style for right-aligned number input */
 body {
-  background-color: #c0c0c0;
-}
-input[type="number"] {
-  text-align: right;
-}
-#weight-calculation,
-#price-calculation {
-  display: flex;
-  justify-content: center;
+    background-color: #c0c0c0;
+  }
+  input[type="number"] {
+    text-align: right;
+  }
+  #weight-calculation,
+  #price-calculation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #weight-unit,
+  #fine-unit,
+  #purity-unit,
+  #metal-price,
+  #metal-cost,
+  #cal-price,
+  #cal-price {
+    display: flex;
+    padding: 5vw;
+    padding-top: 2vw;
+  }
+  
+  #title,
+  #options {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #options {
+    padding-bottom: 2vw;
+  }
+  
+  @media (max-width: 400px){
+    #weight-calculation,
+    #price-calculation{
+        display: flex;
+        flex-direction: column;
+    }
+    #container,
+    #calc-btn,
+    input, 
+    input::placeholder
+    {
+        font-size: 4vw;
+    }
 
-  align-items: center;
-}
-
-
-#weight-unit,
-#fine-unit,
-#purity-unit,
-#metal-price,
-#metal-cost,
-#cal-price,
-#cal-price{
-  display: flex;
-  padding: 50px;
-  padding-top: 20px;
-}
-
-
-#title,
-#options {
-  display: flex;
-  justify-content: center;
-}
-
-#options {
-  padding-bottom: 20px;
-}
+    input[type="radio"]{
+        width: 4vw;
+        height: 4vw;
+    }
+  }
+  

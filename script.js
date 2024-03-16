@@ -10,15 +10,18 @@ const metalPrice = document.getElementById("price");
 const metalCost = document.getElementById("amount");
 function handleRadioSelection() {
   const u = document.getElementsByClassName("unit");
+  const p = document.getElementById("price");
 
   if (goldRadio.checked) {
     u[0].innerText = "GRAMS";
     u[1].innerText = "GRAMS";
+    p.placeholder = "Enter gold price of 10grams";
     document.body.style.background = "#ffd700";
   } else {
     document.body.style.background = "#c0c0c0";
     u[0].innerText = "KG";
     u[1].innerText = "KG";
+    p.placeholder = "Enter Silver price of 1KG";
   }
 }
 

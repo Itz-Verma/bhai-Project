@@ -42,7 +42,10 @@ function calculateMetalPrice() {
   const pmw = document.getElementById("pure-metal-weight").value;
 
   if (!isNaN(mp) && !isNaN(pmw)) {
-    mc.value = (pmw * mp) ;
+    mc.value = (pmw * mp);
+    if(goldRadio.checked){
+      mc.value = mc.value/10; 
+    } 
   } else {
     mc.value = 0;
   }
